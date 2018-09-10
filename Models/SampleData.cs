@@ -25,9 +25,9 @@ namespace MySql.Models
 
         private static void InsertSampleData(MySqlConnection service)
         {
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO TestData(Id, MyText) VALUES(1, 'Hello Team Computershare');", service);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO TestData(Id, MyText) VALUES(1, 'Hello John!');", service);
             cmd.ExecuteNonQuery();
-            cmd = new MySqlCommand("INSERT INTO TestData(Id, MyText) VALUES(2, 'Hello World!');", service);
+            cmd = new MySqlCommand("INSERT INTO TestData(Id, MyText) VALUES(2, 'Hello Mary!');", service);
             cmd.ExecuteNonQuery();
         }
 
