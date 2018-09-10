@@ -17,7 +17,7 @@ namespace MySql.Controllers
             var viewData = new Dictionary<string, string>();
             dbConnection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM TestData;", dbConnection);
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM TestData; ", dbConnection);
             DbDataReader rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
