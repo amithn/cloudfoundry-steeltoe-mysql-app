@@ -1,0 +1,13 @@
+﻿---
+applications:
+- name: an-mysql-connector
+  buildpack: dotnet_core_buildpack
+  memory: 256M
+  disk_quota: 100M
+  instances: 2
+  path: bin/Debug/netcoreapp2.1/ubuntu.14.04-x64/publish
+  command: cd ${HOME} && ./MySql --server.urls http://0.0.0.0:${PORT}
+  env:
+    ASPNETCORE_ENVIRONMENT: Development
+  services:
+   - myMySqlService
